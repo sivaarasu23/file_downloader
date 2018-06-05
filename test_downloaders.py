@@ -48,15 +48,15 @@ class IntegrationTestCase(unittest.TestCase):
         self.assertTrue(downloader._download())
     def test_ftp_downloaders(self):
 
-        protocal,file_name=process_url(self.sftp_url)
+        protocal,file_name=process_url(self.ftp_url)
         config = houston.base()
         
         downloader_name = protocal.upper() + '_' + 'DOWNLOAD'
         downloaderClass = getattr(__import__('downloaders', fromlist=[downloader_name]), downloader_name)
-        downloader = downloaderClass(self.sftp_url,file_name,config)
+        downloader = downloaderClass(self.ftp_url,file_name,config)
 
         ## check dynamically imported class is correct
-        self.assertIsInstance(downloader,SFTP_DOWNLOAD)
+        self.assertIsInstance(downloader,FTP_DOWNLOAD)
 
         #proceed with the download using the validated instance
         #assertTrue to make sure download is successfull
