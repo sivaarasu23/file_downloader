@@ -10,8 +10,9 @@ Determines the protocal and filename from the urls and downloads file
   * As the first step create ".credentials" folder inside configuration folder and create a file with name "houston.cfg" or set environment variable for the credentials path to the variable "credential_path"
   * Below shows the example of how it should look like, it should have credentials for sftp and ftp server you are trying download
   * You can also add download locations for each protocal or you can set environment variables in the same name.Makse sure its the same name as provided in the example image
-  ![alt text](screenshots/config_example.png| width=100)
   * you can run the script by passing single url or a file with urls (Assumes the file has only one column of urls) to download
+  
+  ![alt text](screenshots/config_example.png)
 
 # How to run:
 
