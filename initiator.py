@@ -10,7 +10,7 @@ import pandas as pd
 parser = argparse.ArgumentParser(description='Ultimate file downnloader.')
 parser.add_argument('-url','--url',help='url to download')
 parser.add_argument('-file','--file',help='text file with urls to download')
-parser.add_argument('-chunk_size','--chunk_size',help='text file with urls to download')
+parser.add_argument('-chunk_size','--chunk_size',help='text file with urls to download',default=10)
 
 ####parsing arguments and loading configurations
 args = parser.parse_args()
