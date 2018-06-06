@@ -30,9 +30,7 @@ def getmypath(init=__file__):
     return a
 
 AGODA_HOME = os.environ.get('AGODA_HOME') if os.environ.get('AGODA_HOME') else getmypath(__file__)
-AGODA_HOME='/data/working_dir/user/siva/agoda/'
-CREDENTIALS_FOLDER = os.environ.get('credential_path') if os.environ.get('credential_path') else AGODA_HOME + '.test_credentials'
-# makedirs(CREDENTIALS_FOLDER)
+CREDENTIALS_FOLDER = os.environ.get('credential_path') if os.environ.get('credential_path') else AGODA_HOME + '.credentials'
 
 # Credentials basic load from enviroment variables or from cfg file
 AGODA_CONFIG_FILE = os.path.join(CREDENTIALS_FOLDER, 'houston.cfg')
@@ -44,7 +42,7 @@ class base():
 	def __init__(self):
 		pass
 
-SECTIONS=['ftp', 'sftp','credentials','download_location']
+SECTIONS=['ftp', 'sftp','download_location']
 
 for section in SECTIONS:
 	for c,v in config.items(section):

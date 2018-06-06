@@ -21,7 +21,6 @@ class SFTP_DOWNLOAD:
         try:
             key = self.cfg.sftp_private_key
         except Exception, e:
-            print 'Private key is not found in configuration.. Using password'
             key=None
 
         try:
