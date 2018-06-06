@@ -15,8 +15,8 @@ Determines the protocal and filename from the urls and downloads file
   ![alt text](screenshots/config_example.png)
 
 # How to run:
-
-To start the downloader, run `python initiator.py -url=' '` or `python initiator.py -file='path/to/input file'`
+To start the downloader, run `python initiator.py -url=' '` or `python initiator.py -file='path/to/input file'` or `python initiator.py -file='path/to/input file' -chunk_size=20`
+* If the file is mentioned , then by default it takes 10 urls per chunk and downloads file parallely
 
 # To add additional protocal:
 * Add credentials if there is any to configuration file
